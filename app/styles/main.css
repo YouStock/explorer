@@ -33,6 +33,7 @@ body {
   padding: 0;
 }
 
+/*
 .navbar-dark {
   background-color: #293640;
   color: #FFF;
@@ -47,24 +48,38 @@ body {
 .navbar a:visited {
   color: #FFF;
 }
+*/
+
+nav.navbar, nav.navbar-dark {
+    background-image: -webkit-linear-gradient(#777, #000 50%, #444);
+    background-image: -o-linear-gradient(#777, #000 50%, #444);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#777), color-stop(50%, #000), to(#444));
+    background-image: linear-gradient(#777, #000 50%, #444);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#777777', endColorstr='#000000', GradientType=0);
+    -webkit-filter: none;
+    filter: none;
+    border: 1px solid #d5d5d5;
+	 text-shadow: none; 
+}
 
 .title {
-  color: #FFF;
+  /*color: #FFF;*/
   font-weight: bold;
 }
 
 input.searchi {
+  /*border: 2px solid #384a58;
   background-color: #293640 !important;
-  border: 2px solid #384a58;
-  color: #fff;
+  color: #fff;*/
   width: 100% !important;
 }
 
 input.searchimain {
   height: 50px;
-  background-color: #293640 !important;
-  border: 2px solid #384a58;
+  /*background-color: #293640 !important;
   color: #fff;
+  border: 2px solid #384a58;*/
   width: 100%;
 }
 
@@ -75,20 +90,41 @@ input.searchimain {
 }
 
 .boxi {
-  background-color: #104050;
-  color: #FFF;
+  /*background-color: #ccc;*/
   font-size: 18px;
   font-weight: lighter;
   padding: 15px;
   border-radius: 4px;
   margin-bottom: 20px;
+
+  background-image: -webkit-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -o-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #eee), to(#e4e4e4));
+    background-image: linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe4e4e4', GradientType=0);
+    -webkit-filter: none;
+    filter: none;
+    border: 1px solid #d5d5d5;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .thead-inverse {
-  background-color: #293640;
-  color: #FFF;
+  /*background-color: #293640;
+  color: #FFF;*/
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+
+  background-image: -webkit-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -o-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #eee), to(#e4e4e4));
+    background-image: linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe4e4e4', GradientType=0);
+    -webkit-filter: none;
+    filter: none;
+    border: 1px solid #d5d5d5;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
@@ -137,9 +173,18 @@ input.searchimain {
   bottom: 0px;
   padding-bottom: 25px;
   text-align: center;
-  color: #FFF;
-  background-color: #293640;
   width:100%;
+
+  background-image: -webkit-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -o-linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(50%, #eee), to(#e4e4e4));
+    background-image: linear-gradient(#fff, #eee 50%, #e4e4e4);
+    background-repeat: no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe4e4e4', GradientType=0);
+    -webkit-filter: none;
+    filter: none;
+    border: 1px solid #d5d5d5;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
 
 // make the rpc command dialogue wider

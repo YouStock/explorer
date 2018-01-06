@@ -104,6 +104,8 @@ angular.module('ethExplorer')
                 // Gas Limit
                 $scope.gasLimit = new BigNumber(blockNewest.gasLimit).toFormat(0) + " m/s";
 
+                $scope.hashrate = blockNewest.difficulty / 15;
+
                 // Time
                   var newDate = new Date();
                   newDate.setTime(blockNewest.timestamp*1000);
@@ -170,28 +172,33 @@ angular.module('ethExplorer')
 
 
         function getHashrate()	{
-          $.getJSON("https://etherchain.org/api/miningEstimator", function(json) {
-            var hr = json.data[0].hashRate;
-            $scope.hashrate = hr;
-       	});
       }
 
         function getETHRates() {
+			 //todo: pull from first exchange 
+var icoprice = 0.1;
+
+            $scope.ethprice = "$" + icoprice.toFixed(2);
+/*
           $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
             var price = Number(json[0].price_usd);
             $scope.ethprice = "$" + price.toFixed(2);
           });
+			 */
 
-          $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
-            var btcprice = Number(json[0].price_btc);
-            $scope.ethbtcprice = btcprice;
+          $.getJSON("https://api.coinmarketcap.com/v1/ticker/bitcoin/", function(json) {
+            var btcprice = Number(json[0].price_usd);
+            $scope.ethbtcprice = icoprice / btcprice
           });
 
+				/*
           $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
             var cap = Number(json[0].market_cap_usd);
-            //console.log("Current ETH Market Cap: " + cap);
             $scope.ethmarketcap = cap;
           });
+			 */
+
+            $scope.ethmarketcap = icoprice * 100000000;
         }
 
         function updateTXList() {

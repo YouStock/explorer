@@ -53,6 +53,11 @@ angular.module('ethExplorer')
             }
 
             function getETHUSD() {
+
+var balanceusd = "$" + 0.10 * $scope.balance;
+                $scope.balanceusd = balanceusd;
+					 
+					/* 
               $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(json) {
                 var price = Number(json[0].price_usd);
                 var ethusd = price.toFixed(2);
@@ -60,6 +65,7 @@ angular.module('ethExplorer')
                 $scope.balanceusd = balanceusd;
                 //console.log("Balance in USD " + $scope.balanceusd);
               });
+				  */
             }
 
             function getAddressTransactionCount(){
